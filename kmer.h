@@ -24,7 +24,7 @@
 #include <stdio.h>
 #include <string>
 
-#define K 28
+#define K 21
 
 enum DNA_MAP {C, A, T, G};  // A=1, C=0, T=2, G=3
 

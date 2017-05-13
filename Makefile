@@ -1,5 +1,5 @@
 TARGETS=main kmer_query kmer_inner_prod
-
+NH=1
 ifdef D
 	DEBUG=-g
 	OPT=
@@ -24,7 +24,7 @@ LD= g++ -std=c++11
 
 CXXFLAGS = -Wall $(DEBUG) $(PROFILE) $(OPT) $(ARCH) -m64 -I. -Wno-unused-result -Wno-strict-aliasing -Wno-unused-function
 
-LDFLAGS = $(DEBUG) $(PROFILE) $(OPT) -lpthread -lssl -lcrypto -lboost_system -lboost_thread -lm -lbz2 -lz
+LDFLAGS = $(DEBUG) $(PROFILE) $(OPT) -L/cm/shared/apps/zlib/1.2.8/lib -lpthread -lssl -lcrypto -lboost_system -lboost_thread -lm -lbz2 -lz
 
 #
 # declaration of dependencies
